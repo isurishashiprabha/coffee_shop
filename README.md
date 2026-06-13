@@ -34,7 +34,7 @@ Add screenshots of your website here:
 - CSS3  
 - JavaScript (Vanilla JS)
 
-  ## Project Structure
+## Project Structure
 
   coffee-shop-website/
 │
