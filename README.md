@@ -4,7 +4,7 @@ A modern, responsive coffee shop website built using **HTML, CSS, and JavaScript
 This project is designed to provide a clean and user-friendly experience for showcasing a coffee shop menu, services, and contact details.
 
 ## Live Demo
-🌐 Website: https://yourusername.github.io/coffee-shop-website/
+🌐 Website: https://yourusername.github.io/coffee_shop/
 
 ## Project Preview
 
