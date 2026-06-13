@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe Haven | Our Products</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body style="background-image: url('images/wallpaper1.jpg');">
+
+  <header>
+   <div class="logo">
+    <a href="index.html">
+      <img src="images/logo.png" alt="Cafe Haven Logo">
+    </a>
+  </div>
+
+    <nav class="nav-center">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="offers.html">Offers</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+  <input type="text" placeholder="Search..." class="search-box">
+  <a href="cart.html" class="cart-icon">
+  <i class="fas fa-shopping-cart"></i>
+  <span id="cart-count">0</span>
+</a>
+  
+  <a href="login.html" class="login-icon">
+    <i class="fas fa-user"></i></a>
+  </div>
+  </header>
+
+  <section class="products-section">
+  <h2>Our Products</h2>
+  <p class="products-tagline">Crafted with passion, served with love.</p>
+
+  <div class="products-grid" id="productsGrid">
+
+  <div class="product-card" data-name="Arabica Coffee Pack" data-price="1490" data-img="images/arabica.jpg">
+    <img src="images/arabica.jpg" alt="Arabica Coffee">
+    <h3>Arabica Coffee Pack</h3>
+    <p>Premium Arabica coffee beans with a rich aroma and smooth taste.</p>
+    <p class="product-price">Rs. 1,490</p>
+  <div class="card-actions">
+    <button class="add-cart-btn" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <button class="add-fav-btn" onclick="toggleFavourite(this)"><i class="far fa-heart"></i></button>
+  </div>
+  </div>
+
+  <div class="product-card" data-name="Robusta Coffee Pack" data-price="1950" data-img="images/robusta.jpg">
+    <img src="images/robusta.jpg" alt="Robusta Coffee">
+    <h3>Robusta Coffee Pack</h3>
+    <p>Strong and bold Robusta coffee for an energizing experience.</p>
+    <p class="product-price">Rs. 1,950</p>
+  <div class="card-actions">
+    <button class="add-cart-btn" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <button class="add-fav-btn" onclick="toggleFavourite(this)"><i class="far fa-heart"></i></button>
+  </div>
+  </div>
+
+  <div class="product-card" data-name="Espresso Blend Pack" data-price="2550" data-img="images/espresso1.jpg">
+    <img src="images/espresso1.jpg" alt="Espresso Blend">
+    <h3>Espresso Blend Pack</h3>
+    <p>Perfectly blended coffee beans for rich espresso shots.</p>
+    <p class="product-price">Rs. 2,550</p>
+  <div class="card-actions">
+    <button class="add-cart-btn" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <button class="add-fav-btn" onclick="toggleFavourite(this)"><i class="far fa-heart"></i></button>
+  </div>
+  </div>
+
+  <div class="product-card" data-name="Premium Coffee Pack" data-price="2980" data-img="images/premium-coffee.jpg">
+    <img src="images/premium-coffee.jpg" alt="Premium Coffee">
+    <h3>Premium Coffee Pack</h3>
+    <p>Carefully selected premium coffee beans packed for freshness.</p>
+    <p class="product-price">Rs. 2,980</p>
+  <div class="card-actions">
+    <button class="add-cart-btn" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <button class="add-fav-btn" onclick="toggleFavourite(this)"><i class="far fa-heart"></i></button>
+  </div>
+  </div>
+
+  <div class="product-card" data-name="Mocha Coffee Pack" data-price="3200" data-img="images/mocha2.jpg">
+    <img src="images/mocha2.jpg" alt="Mocha Coffee">
+    <h3>Mocha Coffee Pack</h3>
+    <p>A delicious blend of premium coffee and chocolate flavors for a rich taste experience.</p>
+    <p class="product-price">Rs. 3,200</p>
+  <div class="card-actions">
+    <button class="add-cart-btn" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <button class="add-fav-btn" onclick="toggleFavourite(this)"><i class="far fa-heart"></i></button>
+  </div>
+</div>
+
+<div class="product-card" data-name="Ceylon Coffee Pack" data-price="2890" data-img="images/ceylon-coffee.jpg">
+    <img src="images/ceylon-coffee.jpg" alt="Ceylon Coffee">
+    <h3>Ceylon Coffee Pack</h3>
+    <p>Authentic Sri Lankan coffee beans with a distinctive aroma and balanced flavor.</p>
+    <p class="product-price">Rs. 2,890</p>
+  <div class="card-actions">
+    <button class="add-cart-btn" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <button class="add-fav-btn" onclick="toggleFavourite(this)"><i class="far fa-heart"></i></button>
+  </div>
+</div>
+
+<div class="cart-panel" id="cartPanel">
+    <div class="cart-panel-header">
+      <h3><i class="fas fa-shopping-cart"></i> Cart</h3>
+      <button class="close-panel" onclick="toggleCartPanel()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-panel-items" id="cartPanelItems">
+      <p class="empty-msg">Your cart is empty.</p>
+    </div>
+    <div class="cart-panel-footer">
+      <div class="cart-total">Total: <span id="cartPanelTotal">Rs. 0</span></div>
+      <a href="cart.html" class="view-cart-btn">View Cart</a>
+      <a href="checkout.html" class="checkout-btn-panel">Checkout</a>
+    </div>
+  </div>
+  <div class="panel-overlay" id="panelOverlay" onclick="toggleCartPanel()"></div>
+
+</div>
+</section>
+
+  <section class="feedback-section">
+    <h2>Customer Feedback</h2>
+    <p class="feedback-tagline">Share your Cafe Haven experience ☕</p>
+    <div class="feedback-form">
+      <input type="text" id="reviewName" placeholder="Your name">
+      <div class="star-row">
+        <label>Rating:</label>
+        <button class="star-btn" type="button">★</button>
+        <button class="star-btn" type="button">★</button>
+        <button class="star-btn" type="button">★</button>
+        <button class="star-btn" type="button">★</button>
+        <button class="star-btn" type="button">★</button>
+      </div>
+      <textarea id="reviewMsg" placeholder="Write your review..."></textarea>
+      <button id="submitReview"><i class="fas fa-paper-plane"></i> Submit Review</button>
+    </div>
+    <div class="reviews-title">💬 What Our Customers Say</div>
+    <div id="reviewsList"></div>
+  </section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h3>Cafe Haven</h3>
+      <p>Where every sip feels like home. Serving premium coffee, delicious treats, and unforgettable moments since 2003.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="offers.html">Offers</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Colombo 02000, Sri Lanka</p>
+      <p><i class="fas fa-phone"></i> +94 11 255 2180</p>
+      <p><i class="fas fa-envelope"></i> info@cafehaven.com</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Cafe Haven. All Rights Reserved.</p>
+  </div>
+</footer>
+
+  <div id="qvOverlay" onclick="closeQuickView()"></div>
+  <div id="quickViewModal">
+    <button class="qv-close" onclick="closeQuickView()"><i class="fas fa-times"></i></button>
+    <img id="qv-img" src="" alt="">
+    <div class="qv-body">
+      <h3 id="qv-name"></h3>
+      <div class="qv-price" id="qv-price"></div>
+      <p id="qv-desc"></p>
+      <button class="qv-add-btn" id="qv-add-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+  </div>
+
+  <button id="scrollTopBtn" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="shop.js"></script>
+
+</body>
+</html>

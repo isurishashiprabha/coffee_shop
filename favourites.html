@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe Haven | Favourites</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body style="background-image: url('images/wallpaper1.jpg');">
+
+  <header>
+   <div class="logo">
+    <a href="index.html"><img src="images/logo.png" alt="Cafe Haven Logo"></a>
+  </div>
+    <nav class="nav-center">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="offers.html">Offers</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <input type="text" placeholder="Search..." class="search-box">
+      <a href="favourites.html" class="fav-nav-icon">
+        <i class="fas fa-heart"></i>
+        <span id="fav-count">0</span>
+      </a>
+      <a href="cart.html" class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </a>
+      <a href="login.html" class="login-icon"><i class="fas fa-user"></i></a>
+    </div>
+  </header>
+
+  <section class="page-section">
+    <h2 class="page-title"><i class="fas fa-heart"></i> My Favourites</h2>
+    <div id="favContent">
+      <p class="empty-page-msg">No favourites yet. <a href="menu.html" class="go-menu-link">Browse Menu</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h3>Cafe Haven</h3>
+      <p>Where every sip feels like home. Serving premium coffee, delicious treats, and unforgettable moments since 2003.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="offers.html">Offers</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Colombo 02000, Sri Lanka</p>
+      <p><i class="fas fa-phone"></i> +94 11 255 2180</p>
+      <p><i class="fas fa-envelope"></i> info@cafehaven.com</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Cafe Haven. All Rights Reserved.</p>
+  </div>
+</footer>
+
+  <script src="shop.js"></script>
+  <script>renderFavouritesPage();</script>
+  
+  <button id="scrollTopBtn" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+</body>
+</html>

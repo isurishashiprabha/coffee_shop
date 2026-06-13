@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe Haven | Checkout</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body style="background-image: url('images/wallpaper1.jpg');">
+
+  <header>
+   <div class="logo">
+    <a href="index.html"><img src="images/logo.png" alt="Cafe Haven Logo"></a>
+  </div>
+    <nav class="nav-center">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="offers.html">Offers</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a href="favourites.html" class="fav-nav-icon">
+        <i class="fas fa-heart"></i>
+        <span id="fav-count">0</span>
+      </a>
+      <a href="cart.html" class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </a>
+      <a href="login.html" class="login-icon"><i class="fas fa-user"></i></a>
+    </div>
+  </header>
+
+  <section class="page-section checkout-layout">
+    <div class="checkout-form-section">
+      <h2 class="page-title"><i class="fas fa-credit-card"></i> Checkout</h2>
+
+      <div class="checkout-step">
+        <h3><i class="fas fa-user"></i> Personal Details</h3>
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="chkName" placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="chkEmail" placeholder="name@gmail.com">
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" id="chkPhone" placeholder="+94 70 123 4567">
+        </div>
+      </div>
+
+      <div class="checkout-step">
+        <h3><i class="fas fa-map-marker-alt"></i> Delivery Address</h3>
+        <div class="form-group">
+          <label>Street Address</label>
+          <input type="text" id="chkAddress" placeholder="123 Main Street">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>City</label>
+            <input type="text" id="chkCity" placeholder="Colombo">
+          </div>
+          <div class="form-group">
+            <label>Postal Code</label>
+            <input type="text" id="chkPostal" placeholder="00200">
+          </div>
+        </div>
+      </div>
+
+      <div class="checkout-step">
+        <h3><i class="fas fa-credit-card"></i> Payment Method</h3>
+        <div class="payment-options">
+          <label class="payment-option">
+            <input type="radio" name="payment" value="card" checked>
+            <span><i class="fas fa-credit-card"></i> Credit / Debit Card</span>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="cash">
+            <span><i class="fas fa-money-bill-wave"></i> Cash on Delivery</span>
+          </label>
+        </div>
+        <div id="cardFields">
+          <div class="form-group">
+            <label>Card Number</label>
+            <input type="text" id="cardNum" placeholder="1234 5678 9012 3456" maxlength="19">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Expiry Date</label>
+              <input type="text" id="cardExpiry" placeholder="MM/YY">
+            </div>
+            <div class="form-group">
+              <label>CVV</label>
+              <input type="text" id="cardCvv" placeholder="123" maxlength="3">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="place-order-btn" onclick="placeOrder()">
+        <i class="fas fa-check-circle"></i> Place Order
+      </button>
+    </div>
+
+    <div class="order-summary-section">
+      <h3><i class="fas fa-receipt"></i> Order Summary</h3>
+      <div id="checkoutItems"></div>
+      <div class="summary-row"><span>Subtotal:</span><span id="chkSubtotal">Rs. 0</span></div>
+      <div class="summary-row"><span>Delivery Fee:</span><span>Rs. 150</span></div>
+      <div class="summary-row total-row"><span>Grand Total:</span><span id="chkTotal">Rs. 150</span></div>
+    </div>
+  </section>
+
+  <div class="order-modal" id="orderModal">
+    <div class="order-modal-content">
+      <div class="order-success-icon"><i class="fas fa-check-circle"></i></div>
+      <h2>Order Placed!</h2>
+      <p>Thank you for your order. We'll get it ready soon! ☕</p>
+      <a href="menu.html" class="back-menu-btn">Back to Menu</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Cafe Haven. All rights reserved.</p>
+  </footer>
+  <script src="shop.js"></script>
+  <script>renderCheckoutPage();</script>
+
+  <button id="scrollTopBtn" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+</body>
+</html>
